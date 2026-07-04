@@ -99,7 +99,6 @@ def send():
     response = send_message(config, text)
 
     if response is None:
-        console.print("[bold red]Failed to send Telegram message.[/bold red]")
         return
 
     if not response.ok:
@@ -136,7 +135,6 @@ def watch():
             time.sleep(0.5)
 
             if response is None:
-                console.print("[bold red]Failed to send Telegram message.[/bold red]")
                 return
 
             message_id = response.json()["result"]["message_id"]
@@ -173,7 +171,6 @@ def shell():
             response = send_message(config, texts)
 
             if response is None:
-                console.print("[bold red]Failed to send Telegram message.[/bold red]")
                 return
 
             message_id = response.json()["result"]["message_id"]
@@ -218,23 +215,24 @@ def doctor():
     config_chat_id = config.get("chat_id")
     assert bot_token is not None
 
-    console.print("[green]✔ Config found[/]")
+    console.print("[green]✔ Config found[/green]")
     sleep(0.3)
 
     with console.status("[cyan]Cheking token...[/cyan]", spinner="arc"):
         isvalid = validate_token(bot_token)
 
     if isvalid:
-        console.print("[green]✔ Token valid[/]")
+        console.print("[green]✔ Token valid[/red]")
         sleep(0.3)
 
     with console.status("[cyan]Cheking chat ID...[/cyan]", spinner="arc"):
         new_chat_id = get_user_chat_id(bot_token)
 
-    if config_chat_id == new_chat_id:
-        console.print("[green]✔ Chat ID valid[/]")
-    else:
-        console.print("[/red]✘ Chat ID not valid[/]")
+    if new_chat_id is not None:
+        if config_chat_id == new_chat_id:
+            console.print("[green]✔ Chat ID valid[/green]")
+        else:
+            console.print("[red]✘Chat ID not valid[/red]")
     sleep(0.2)
 
     try:
