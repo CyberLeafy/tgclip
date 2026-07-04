@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "tgclip"
+version = "0.1.0"
+description = "Send clipboard content to Telegram instantly."
+readme = "README.md"
+requires-python = ">=3.14"
+license = { text = "MIT" }
+authors = [
+    { name = "CyberLeafy" }
+]
+keywords = [
+    "telegram",
+    "clipboard",
+    "cli",
+    "terminal",
+    "python"
+]
+
+dependencies = [
+    "pyperclip>=1.11.0",
+    "requests>=2.34.2",
+    "rich>=15.0.0",
+    "typer>=0.26.8",
+]
+
+[project.scripts]
+tgclip = "tgclip.main:main"
