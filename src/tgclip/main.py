@@ -80,10 +80,6 @@ def init():
 
     if is_config:
         console.print("[bold yellow]All ready setup.[/bold yellow]\n")
-        console.print("[bold red]Note:[/bold red]")
-        console.print("[red]Open your Telegram bot.[/red]")
-        console.print("[cyan]Send [blue]/start[/blue].[/cyan]")
-        console.input("[green]Press Enter after sending /start...[/green]")
 
 
 @app.command(help="Send clipboard text content to Telegram.")
