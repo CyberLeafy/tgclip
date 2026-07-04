@@ -27,7 +27,7 @@ A lightweight CLI that moves text, code, links, and commands from your desktop s
 - [Privacy](#-privacy)
 - [Troubleshooting](#-troubleshooting)
 - [Requirements](#-requirements)
-- [Contributing](#-contributing)
+- [Issues](#-issues)
 - [License](#-license)
 
 <br>
@@ -200,25 +200,16 @@ TGCLIP talks **directly** to the Telegram Bot API — nothing else is in the loo
 
 <br>
 
-## 🤝 Contributing
-
-Bug reports, feature requests, and pull requests are always welcome — open an issue to get started.
+## 🐞 Issues
+Found a bug or have a feature request? Please open an issue on Github.
 
 <br>
 
 ## 📄 License
-
 Released under the **MIT License**.
 
 <br>
 
----
-
-## 🆘 Support
-
-If you encounter a bug or have a feature suggestion, please open an issue on the GitHub repository.
-
----
 
 <div align="center">
 
