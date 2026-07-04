@@ -6,6 +6,10 @@ def console_input_func():
     return console.input("[bold green]➤ [/bold green]").strip()
 
 
+def clear_screen():
+    os.system("cls" if os.name == "nt" else "clear")
+
+
 def multiline_input(name: str):
     lines = []
     while True:
@@ -16,7 +20,7 @@ def multiline_input(name: str):
             return "exit"
 
         if line.lower() == "/clear":
-            os.system("cls" if os.name == "nt" else "clear")  # clear terminal
+            clear_screen()
             console.print("[bold green]TGCLIP Shell[/bold green]")
             console.print("Type '/exit' to quit.")
             console.print("Type '/clear' to clear screen.\n")

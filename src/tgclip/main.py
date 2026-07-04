@@ -1,6 +1,5 @@
 from time import sleep
 import time
-import os
 import sys
 import pyperclip
 import typer
@@ -15,7 +14,7 @@ from tgclip.config import (
     setup_name,
 )
 from tgclip.telegram import get_user_chat_id, send_message, validate_token
-from tgclip.utils import console_input_func, multiline_input
+from tgclip.utils import console_input_func, multiline_input, clear_screen
 
 app = typer.Typer(
     add_completion=False, help="Send clipboard content to Telegram instantly."
@@ -151,7 +150,7 @@ def shell():
     if config is None or is_config is False:
         return
 
-    os.system("cls" if os.name == "nt" else "clear")  # clear terminal
+    clear_screen()
 
     console.print("[bold green]TGCLIP Shell[/bold green]")
     console.print("Type '/exit' to quit.")
@@ -222,7 +221,7 @@ def doctor():
         isvalid = validate_token(bot_token)
 
     if isvalid:
-        console.print("[green]✔ Token valid[/red]")
+        console.print("[green]✔ Token valid[/green]")
         sleep(0.3)
 
     with console.status("[cyan]Cheking chat ID...[/cyan]", spinner="arc"):
