@@ -8,9 +8,11 @@
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](#-license)
 [![Telegram](https://img.shields.io/badge/Telegram-Bot%20API-26A5E4?logo=telegram&logoColor=white)](https://core.telegram.org/bots)
+[![GitHub](https://img.shields.io/badge/GitHub-CyberLeafy-181717?logo=github)](https://github.com/cyberleafy)
 
 A lightweight CLI that moves text, code, links, and commands from your desktop straight to Telegram — built for developers, students, and anyone who lives between a laptop and a phone.
 
+**website: [tgclip](https://tgclip.netlify.app/)**
 </div>
 
 <br>
@@ -22,7 +24,6 @@ A lightweight CLI that moves text, code, links, and commands from your desktop s
 - [Prerequisites](#-prerequisites)
 - [Quick Start](#-quick-start)
 - [Commands](#-commands)
-- [Workflow](#-workflow)
 - [Use Cases](#-use-cases)
 - [Privacy](#-privacy)
 - [Troubleshooting](#-troubleshooting)
@@ -49,6 +50,14 @@ A lightweight CLI that moves text, code, links, and commands from your desktop s
 <br>
 
 ## 📦 Installation
+
+#### Using uv (Recommended)
+
+```bash
+uv tool install tgclip 
+```
+
+#### Using pip
 
 ```bash
 pip install tgclip
@@ -151,17 +160,6 @@ Wipes the current configuration so you can start fresh.
 
 <br>
 
-## 🔁 Workflow
-
-```mermaid
-flowchart LR
-    A[📄 Copy text] --> B[tgclip send]
-    B --> C[✈️ Telegram]
-    C --> D[📱 Open on phone]
-```
-
-<br>
-
 ## 💡 Use Cases
 
 - 🧩 Send code snippets to your phone
@@ -213,7 +211,7 @@ Released under the **MIT License**.
 
 <div align="center">
 
-**Developed by CyberLeafy**
+**Developed by [CyberLeafy]("https://github.com/CyberLeafy")**
 
 *TGCLIP — Fast. Simple. Clipboard to Telegram.* 📋➡️📱
 

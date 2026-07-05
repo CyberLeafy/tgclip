@@ -5,10 +5,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tgclip"
-version = "0.1.0"
+version = "0.1.1"
 description = "Send clipboard content to Telegram instantly."
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [
     { name = "CyberLeafy" }
@@ -28,6 +28,21 @@ dependencies = [
     "rich>=15.0.0",
     "typer>=0.26.8",
 ]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: MIT",
+    "Enviroment :: Console",
+    "Operating System :: OS Independent",
+]
+
+
+[project.urls]
+Homepage = "https://tgclip.netlify.app/"
+Repository = "https://github.com/CyberLeafy/tgclip"
+Issues = "https://github.com/CyberLeafy/tgclip/issues"
+
 
 [project.scripts]
 tgclip = "tgclip.main:main"
